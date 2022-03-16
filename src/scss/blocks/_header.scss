@@ -1,0 +1,94 @@
+.header {
+	background-color: $bgColor;
+	padding: 23px 0;
+	height: 81px;
+	position: sticky;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	// .header__wrapper
+	&__wrapper {
+		@include flex(space-between, center);
+	}
+
+	// .header__logo
+	&__logo {}
+
+	// .header__contacts
+	&__contacts {
+		margin-left: 10px;
+		width: 38px;
+		height: 33px;
+		border: 1px solid #fff;
+		position: relative;
+
+		&::before {
+			@include pseudo;
+			@include pos(absolute, $top: 0, $left: 0);
+			@include background (url("./../img/header/tel.svg"));
+			width: 16px;
+			height: 16px;
+			transform: translate(50%, 50%);
+
+			@media (min-width:1000px) {
+				display: none;
+			}
+		}
+	}
+
+	// .header__tel
+	&__tel {
+		display: none;
+
+		@media (min-width:1000px) {
+			display: flex;
+		}
+	}
+
+	// .header__mail
+	&__mail {
+		display: none;
+	}
+
+	// .header__menu
+	&__menu {
+		border: 1px solid #FFF;
+		width: 77px;
+		height: 33px;
+		@include flex (flex-end, center);
+		padding-right: 13px;
+		position: relative;
+
+		&::before {
+			@include pseudo;
+			@include pos (absolute, $top:50%, $left: 5px);
+			@include background(url("./../img/header/points.svg"));
+			width: 12px;
+			height: 3px;
+			transform: translate(50%);
+		}
+	}
+}
+
+.logo {}
+
+.menu {
+	span {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 130%;
+	}
+
+	// .menu__list
+	&__list {
+		display: none;
+	}
+
+	// .menu__item
+	&__item {}
+
+	// .menu__link
+	&__link {}
+}
