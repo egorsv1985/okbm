@@ -451,17 +451,48 @@ template {
   left: 0;
   width: 100%;
 }
+@media (min-width: 1000px) {
+  .header {
+    height: 100px;
+    padding: 14px 0;
+  }
+  .header .container {
+    padding: 0 67px;
+    max-width: 100%;
+  }
+}
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 1000px) {
+  .header__logo img {
+    width: 286px;
+    height: 72px;
+  }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
 .header__contacts {
   margin-left: 10px;
-  width: 38px;
-  height: 33px;
-  border: 1px solid #fff;
   position: relative;
+}
+@media (min-width: 1000px) {
+  .header__contacts {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 130%;
+  }
 }
 .header__contacts::before {
   content: "";
@@ -473,8 +504,8 @@ template {
   background-position: center;
   background-size: cover;
   background-image: url("./../img/header/tel.svg");
-  width: 16px;
-  height: 16px;
+  width: 38px;
+  height: 33px;
   transform: translate(50%, 50%);
 }
 @media (min-width: 1000px) {
@@ -488,10 +519,43 @@ template {
 @media (min-width: 1000px) {
   .header__tel {
     display: flex;
+    position: relative;
+  }
+  .header__tel::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -53px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./../img/header/tel-pk.svg");
+    width: 30px;
+    height: 30px;
   }
 }
 .header__mail {
   display: none;
+}
+@media (min-width: 1000px) {
+  .header__mail {
+    display: flex;
+    position: relative;
+  }
+  .header__mail::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./../img/header/mail.svg");
+    width: 30px;
+    height: 20px;
+  }
 }
 .header__menu {
   border: 1px solid #FFF;
@@ -502,6 +566,12 @@ template {
   align-items: center;
   padding-right: 13px;
   position: relative;
+}
+@media (min-width: 1000px) {
+  .header__menu {
+    width: 160px;
+    height: 62px;
+  }
 }
 .header__menu::before {
   content: "";
@@ -517,11 +587,22 @@ template {
   height: 3px;
   transform: translate(50%);
 }
+@media (min-width: 1000px) {
+  .header__menu::before {
+    width: 25px;
+    height: 6px;
+  }
+}
 
 .menu span {
   font-weight: 300;
   font-size: 14px;
   line-height: 130%;
+}
+@media (min-width: 1000px) {
+  .menu span {
+    font-size: 30px;
+  }
 }
 .menu__list {
   display: none;
