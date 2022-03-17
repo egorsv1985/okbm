@@ -1,0 +1,63 @@
+.description {
+	@include background(url("./../img/description/description-bg.jpg"));
+
+	// .description__wrapper
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .description__title
+	&__title {
+
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 130%;
+
+		text-transform: uppercase;
+		text-shadow: 0px 0px 32px rgba(0, 0, 0, 0.51);
+
+	}
+
+	// .description__inner
+	&__inner {
+
+		width: 320px;
+		height: 781px;
+
+
+		background: #FFFFFF;
+		z-index: 1;
+	}
+
+	// .description__block-text
+	&__block-text {}
+
+
+	// .description__subtitle
+	&__subtitle {
+
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+
+		color: $textColorAbout;
+	}
+
+	// .description__text
+	&__text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0em;
+
+		color: $txtColorDesc;
+	}
+}
+
+.container {}
+
+.title {}
+
+.text {}

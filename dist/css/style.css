@@ -505,6 +505,43 @@ template {
   }
 }
 
+.description {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/description/description-bg.jpg");
+}
+.description__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.description__title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 130%;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 32px rgba(0, 0, 0, 0.51);
+}
+.description__inner {
+  width: 320px;
+  height: 781px;
+  background: #FFFFFF;
+  z-index: 1;
+}
+.description__subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+.description__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #4E4E4E;
+}
+
 .primary {
   background-image: url("./../img/primary/primary-bg-mob.jpg");
   background-repeat: no-repeat;
