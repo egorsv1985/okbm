@@ -64,11 +64,11 @@
 
 		&::before {
 			@include pseudo;
-			@include pos(absolute, $top: 0, $left: 0);
+			@include pos(absolute, $top: -17px, $left: -18px);
 			@include background (url("./../img/header/tel.svg"));
 			width: 38px;
 			height: 33px;
-			transform: translate(50%, 50%);
+
 
 			@media (min-width:1000px) {
 				display: none;
