@@ -73,7 +73,7 @@ video[poster] {
 
 .video {
 	width: 100%;
-
+	max-height: 278px;
 	border: 20px solid $bgColor;
 
 	@media (min-width:1000px) {
