@@ -1,0 +1,255 @@
+.footer {
+	padding: 50px 0 0;
+
+	background-color: $bgColorFooter;
+
+	@media (min-width:1000px) {
+		padding: 100px 55px 90px;
+	}
+
+	// .footer__grid
+	&__grid {
+		display: grid;
+
+
+		grid-template-areas:
+			"contacts"
+			"legal"
+			"fact"
+			"work"
+			"logo-mob";
+		gap: 25px;
+		margin-bottom: 26px;
+
+		@media (min-width:1000px) {
+
+			grid-template-areas:
+				"logo legal fact work contacts"
+				"logo legal fact work contacts"
+				"logo legal fact work contacts"
+				"logo legal fact work contacts"
+				"logo legal fact work contacts";
+		}
+
+		gap: 0;
+	}
+
+	// .footer__box-logo
+	&__box-logo {
+		display: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 7px;
+
+		padding: 20px 0;
+
+		@media (min-width:1000px) {
+			display: flex;
+			margin-right: 115px;
+			padding: 0;
+			gap: 12px;
+		}
+
+		// .footer__box-logo--mob
+		&--mob {
+			grid-area: logo-mob;
+			background: $bgColorFooterLogo;
+
+			@media (min-width:1000px) {
+				display: none;
+			}
+
+
+
+		}
+	}
+
+
+
+	// .footer__logo
+	&__logo {
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 134px;
+		height: 34px;
+
+		@media (min-width:1000px) {
+			background: none;
+
+			width: 286px;
+			height: 72px;
+		}
+	}
+
+	// .footer__text
+	&__text {
+
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 130%;
+
+		@media (min-width:1000px) {
+			font-size: 25px;
+		}
+	}
+
+	// .footer__contacts
+	&__contacts {
+		grid-area: contacts;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 130%;
+
+		@media (min-width:1000px) {
+
+			font-size: 32px;
+
+		}
+
+		.title {
+			font-weight: 300;
+			font-size: 32px;
+		}
+	}
+
+	// .footer__wrap
+	&__wrap {
+		@media (min-width:1000px) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+
+	&__mail {
+		position: relative;
+		padding-left: 32px;
+
+		@media (min-width:1000px) {
+
+			font-size: 30px;
+			line-height: 130%;
+
+
+		}
+
+		&::before {
+			@include pseudo;
+			width: 20px;
+			height: 15px;
+			@include background (url("./../img/footer/mail.svg"));
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			transform: translate(-50%, -50%);
+
+		}
+	}
+
+	// .footer__title
+	&__title {
+
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 130%;
+
+		@media (min-width:1000px) {
+
+			font-size: 25px;
+
+		}
+	}
+
+	&__legal-address a,
+	&__fact-address a {
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: #E2E2E2;
+
+		@media (min-width:1000px) {
+			font-size: 20px;
+		}
+
+
+	}
+
+	&__legal-address,
+	&__fact-address,
+	&__working-hours {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		@media (min-width:1000px) {
+			gap: 20px;
+		}
+	}
+
+	// .footer__legal-address
+	&__legal-address {
+		grid-area: legal;
+
+		@media (min-width:1000px) {
+			margin-right: 65px;
+			max-width: 210px;
+		}
+
+
+	}
+
+	// .footer__fact-address
+	&__fact-address {
+		grid-area: fact;
+
+		@media (min-width:1000px) {
+			margin-right: 65px;
+		}
+	}
+
+	// .footer__working-hours
+	&__working-hours {
+		grid-area: work;
+
+		@media (min-width:1000px) {
+			margin-right: 160px;
+		}
+	}
+
+	// .footer__block
+	&__block {
+		display: flex;
+		flex-direction: column;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: #E2E2E2;
+
+		@media (min-width:1000px) {
+			font-size: 20px;
+		}
+	}
+
+	// .footer__weekdays
+	&__weekdays {}
+
+	// .footer__weekand
+	&__weekand {}
+}
+
+.container {}
+
+.logo {}
+
+.title {}
+
+.footer {}
