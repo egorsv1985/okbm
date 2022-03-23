@@ -1,5 +1,10 @@
+.container+.description--bg {
+	background: none;
+}
+
 .description {
-	@include background(url("./../img/description/description-bg.jpg"));
+
+
 	padding: 50px 0;
 
 	@media (min-width:1000px) {
@@ -7,6 +12,9 @@
 	}
 
 	// .description__wrapper
+	&--bg {
+		@include background(url("./../img/description/description-bg.jpg"));
+	}
 
 	&__wrapper {
 		display: flex;

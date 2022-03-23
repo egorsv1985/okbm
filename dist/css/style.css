@@ -507,17 +507,23 @@ template {
   }
 }
 
+.container + .description--bg {
+  background: none;
+}
+
 .description {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("./../img/description/description-bg.jpg");
   padding: 50px 0;
 }
 @media (min-width: 1000px) {
   .description {
     padding: 100px 0 115px;
   }
+}
+.description--bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/description/description-bg.jpg");
 }
 .description__wrapper {
   display: flex;
@@ -1206,7 +1212,11 @@ template {
 }
 @media (min-width: 1000px) {
   .footer {
-    padding: 100px 55px 90px;
+    padding: 100px 0 65px;
+  }
+  .footer .container {
+    padding: 0 55px;
+    max-width: 100%;
   }
 }
 .footer__grid {
@@ -1214,16 +1224,15 @@ template {
   grid-template-areas: "contacts" "legal" "fact" "work" "logo-mob";
   gap: 25px;
   margin-bottom: 26px;
-  gap: 0;
 }
 @media (min-width: 1000px) {
   .footer__grid {
     grid-template-areas: "logo legal fact work contacts" "logo legal fact work contacts" "logo legal fact work contacts" "logo legal fact work contacts" "logo legal fact work contacts";
+    gap: 0;
   }
 }
 .footer__box-logo {
   display: none;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1239,8 +1248,13 @@ template {
   }
 }
 .footer__box-logo--mob {
+  display: flex;
   grid-area: logo-mob;
   background: #323232;
+}
+.footer__box-logo--mob img {
+  width: 134px;
+  height: 34px;
 }
 @media (min-width: 1000px) {
   .footer__box-logo--mob {
@@ -1251,8 +1265,6 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 134px;
-  height: 34px;
 }
 @media (min-width: 1000px) {
   .footer__logo {
@@ -1282,12 +1294,12 @@ template {
 }
 @media (min-width: 1000px) {
   .footer__contacts {
+    gap: 20px;
+  }
+  .footer__contacts .footer__title,
+.footer__contacts .footer__tel {
     font-size: 32px;
   }
-}
-.footer__contacts .title {
-  font-weight: 300;
-  font-size: 32px;
 }
 @media (min-width: 1000px) {
   .footer__wrap {

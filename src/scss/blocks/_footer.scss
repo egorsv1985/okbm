@@ -4,7 +4,12 @@
 	background-color: $bgColorFooter;
 
 	@media (min-width:1000px) {
-		padding: 100px 55px 90px;
+		padding: 100px 0 65px;
+
+		.container {
+			padding: 0 55px;
+			max-width: 100%;
+		}
 	}
 
 	// .footer__grid
@@ -29,15 +34,15 @@
 				"logo legal fact work contacts"
 				"logo legal fact work contacts"
 				"logo legal fact work contacts";
+			gap: 0;
 		}
 
-		gap: 0;
 	}
 
 	// .footer__box-logo
 	&__box-logo {
 		display: none;
-		display: flex;
+
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -54,8 +59,14 @@
 
 		// .footer__box-logo--mob
 		&--mob {
+			display: flex;
 			grid-area: logo-mob;
 			background: $bgColorFooterLogo;
+
+			img {
+				width: 134px;
+				height: 34px;
+			}
 
 			@media (min-width:1000px) {
 				display: none;
@@ -74,8 +85,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 134px;
-		height: 34px;
+
 
 		@media (min-width:1000px) {
 			background: none;
@@ -84,6 +94,7 @@
 			height: 72px;
 		}
 	}
+
 
 	// .footer__text
 	&__text {
@@ -109,15 +120,16 @@
 		line-height: 130%;
 
 		@media (min-width:1000px) {
+			gap: 20px;
 
-			font-size: 32px;
+			.footer__title,
+			.footer__tel {
+				font-size: 32px;
+			}
+
 
 		}
 
-		.title {
-			font-weight: 300;
-			font-size: 32px;
-		}
 	}
 
 	// .footer__wrap
