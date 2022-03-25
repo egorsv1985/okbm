@@ -1,0 +1,33 @@
+.list-text {
+
+	// .list-text__list
+	&__list {}
+
+	// .list-text__item
+	&__item {}
+
+	// .list-text__title
+	&__title {
+		font-family: 'Roboto Condensed';
+
+		font-weight: 400;
+		font-size: 25px;
+		line-height: 140%;
+		color: $txtColorPage;
+
+
+	}
+
+	// .list-text__paragraph
+	&__paragraph {
+
+		font-family: 'Roboto Condensed';
+
+		font-weight: 400;
+		font-size: 25px;
+		line-height: 140%;
+
+
+		color: $txtColorDesc
+	}
+}

@@ -12,7 +12,8 @@
 @import "./base/tipography";
 
 
-
+// pages
+@import "./pages/competencies";
 
 // components
 
@@ -29,5 +30,10 @@
 
 // block
 @import "./blocks/header";
+
+@import "./blocks/block-text";
+@import "./blocks/list-text";
+@import "./blocks/menu";
+@import "./blocks/menu-list";
 
 @import "./blocks/footer";

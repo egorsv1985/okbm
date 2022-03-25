@@ -4,28 +4,83 @@
 "title": "Компетенции"
 })
 
-<body>
+<body class="page">
 	@@include('html/header.html', {})
-	
-	@@include('html/sections/title-page.html', {
-		"title": {
-			"1": "Компетенции",
-			"2": "проектирование",
-			"3": "производство",
-			"4": "дивизионы",
-			"5": "сервисное ОБСЛУЖИВАНИЕ",
-			"6": "О НАС"
-			}
-	})
-	<!-- @@include('html/sections/manager.html', {})
-	@@include('html/sections/manager-desc.html', {}) -->
-	@@include('html/sections/description.html', {
-		"name" :"Богатырев  ??",
-		"position" : "должность"
-	})
-	<!-- @@include('html/sections/sertificates.html', {}) -->
 
-	<!-- @@include('html/footer.html', {}) -->
+	@@include('html/sections/title-page.html', {
+	"title": {
+	"1": "Компетенции",
+	"2": "проектирование",
+	"3": "производство",
+	"4": "дивизионы",
+	"5": "сервисное ОБСЛУЖИВАНИЕ",
+	"6": "О НАС"
+	}
+	})
+	
+
+	@@include('html/sections/description.html', {
+	"name" :"Богатырев ??",
+	"position" : "должность"
+	})
+	@@include('html/sections/gallery.html', {})
+	<ul class="competencies__menu menu">
+		@@include('html/blocks/menu-list.html', {
+		"link" : "procurement.html",
+		"img" : "@img/competencies/procurement.svg",
+		"alt" : "Заготовительное производство",
+		"text" : "Заготовительное производство"
+		})
+		@@include('html/blocks/menu-list.html', {
+		"link" : "thermal-electroplating.html",
+		"img" : "@img/competencies/thermal-electroplating.svg",
+		"alt" : "Гальвано-термическое производство",
+		"text" : "Гальвано-термическое производство"
+		})
+		@@include('html/blocks/menu-list.html', {
+		"link" : "machining.html",
+		"img" : "@img/competencies/machining.svg",
+		"alt" : "Механообрабатывающее производство",
+		"text" : "Механообрабатывающее производство"
+		})
+		@@include('html/blocks/menu-list.html', {
+		"link" : "test-facility.html",
+		"img" : "@img/competencies/test-facility.svg",
+		"alt" : "Сборочно-испытательный комплекс",
+		"text" : "Сборочно-испытательный комплекс"
+		})
+</ul>
+<ul class="competencies__menu-mob menu">
+	@@include('html/blocks/menu-list.html', {
+	"link" : "procurement.html",
+	"img" : "@img/competencies/procurement.svg",
+	"alt" : "Заготовительное производство",
+	"text" : "Заготовительное производство"
+	})
+	@@include('html/blocks/menu-list.html', {
+	"link" : "thermal-electroplating.html",
+	"img" : "@img/competencies/thermal-electroplating.svg",
+	"alt" : "Гальвано-термическое производство",
+	"text" : "Гальвано-термическое производство"
+	})
+	@@include('html/blocks/menu-list.html', {
+	"link" : "machining.html",
+	"img" : "@img/competencies/machining.svg",
+	"alt" : "Механообрабатывающее производство",
+	"text" : "Механообрабатывающее производство"
+	})
+	@@include('html/blocks/menu-list.html', {
+	"link" : "test-facility.html",
+	"img" : "@img/competencies/test-facility.svg",
+	"alt" : "Сборочно-испытательный комплекс",
+	"text" : "Сборочно-испытательный комплекс"
+	})
+</ul>
+
+	@@include('html/blocks/list-text.html', {})
+
+	@@include('html/footer.html', {})
+
 	<script src="js/app.min.js"></script>
 
 </body>
