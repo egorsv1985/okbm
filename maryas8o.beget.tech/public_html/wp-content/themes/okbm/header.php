@@ -20,9 +20,9 @@
 				</div>
 
 				<div class="header__inner">
-					<div class="header__contacts">
-						<a href="tel: +74732001045" class="header__tel">+7 (473) 200 10 45</a>
-						<a href="mailto:okbm@okbm.ru" class="header__mail">okbm@okbm.ru</a>
+					<div class="header__contacts contacts">
+						<a class="contacts__tel" href="tel: +74732001045">+7 (473) 200 10 45</a>
+						<a class="contacts__mail" href="mailto:okbm@okbm.ru">okbm@okbm.ru</a>
 					</div>
 					<div class="header__menu">
 						<nav class="menu-top">
