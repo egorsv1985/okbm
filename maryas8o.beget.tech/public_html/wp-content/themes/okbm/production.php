@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Компетенции
+Template Name: Производство
 */
 ?>
 <?php get_header(); ?>
@@ -16,7 +16,7 @@ Template Name: Компетенции
 	</div>
 </div>
 <div class="container">
-	<h2 class="title-page title">Компетенции</h2>
+	<h2 class="title-page title">производство</h2>
 </div>
 
 <section class="description description--bg">
@@ -47,55 +47,41 @@ Template Name: Компетенции
 		</div>
 	</div>
 </section>
+<section class="block-text">
+	<div class="container">
+		<div class="block-text__wrapper">
+			<?php $loop = CFS()->get('text');
+			foreach ($loop as $row) {
+			?>
 
+				<p class="block-text__paragraph text"><?= $row['paragraph'] ?></p>
+
+			<?php
+			}
+			?>
+		</div>
+
+	</div>
+</section>
 <section class="galery">
 	<div class="container">
-		<?php echo do_shortcode('[metaslider id="98"]'); ?>
+		<?php echo do_shortcode('[metaslider id="126"]'); ?>
 	</div>
 </section>
-<section class="competencies">
-	<div class="container">
-		<?php wp_nav_menu(
-			array(
-				'theme_location' => 'competencies-menu',
-				'menu_class' => 'competencies__menu-mob menu',
-				'menu_id' => 'competencies',
-				'container,' => false,
-			)
-		);
-		?>
 
-		<?php wp_nav_menu(
-			array(
-				'theme_location' => 'competencies-menu',
-				'menu_class' => 'competencies__menu menu',
-				'menu_id' => 'competencies',
-				'container,' => false,
-			)
-		);
-		?>
-	</div>
-</section>
-<section class="list-text">
+<section class="block-text">
 	<div class="container">
-		<?php
-		$loop = CFS()->get('spisok_text');
-		foreach ($loop as $row) {
-		?>
-			<li class="list-text__item">
-				<h2 class="list-text__title title"><?= $row['title'] ?></h2>
-				<?php
-				$loop = CFS()->get('text');
-				foreach ($loop as $element) {
-				?>
-					<p class="list-text__paragraph text"><?= $element['element'] ?></p>
-				<?php
-				}
-				?>
-			</li>
-		<?php
-		}
-		?>
+		<div class="block-text__wrapper">
+			<?php $loop = CFS()->get('text_2');
+			foreach ($loop as $row) {
+			?>
+
+				<p class="block-text__paragraph text"><?= $row['block_text'] ?></p>
+
+			<?php
+			}
+			?>
+		</div>
 
 	</div>
 </section>
