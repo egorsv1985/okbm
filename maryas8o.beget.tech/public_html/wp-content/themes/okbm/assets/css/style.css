@@ -815,14 +815,14 @@ template {
   color: #263A93;
 }
 
-.swiper {
+/* .swiper {
   margin: 0 auto;
-}
+} */
 
-.swiper img {
+/* .swiper img {
   width: 133px;
   height: 204px;
-}
+} */
 
 .title-page {
   font-weight: 700;

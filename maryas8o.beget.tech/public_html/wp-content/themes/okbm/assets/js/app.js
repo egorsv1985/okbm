@@ -16,7 +16,7 @@ testWebP(function (support) {
   }
 });
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".primarySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
