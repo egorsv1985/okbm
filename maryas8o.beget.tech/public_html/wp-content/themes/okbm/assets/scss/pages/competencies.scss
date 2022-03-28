@@ -1,0 +1,30 @@
+.competencies {
+
+	// .competencies__menu
+	&__menu {
+		display: none;
+
+		@media (min-width:1000px) {
+			display: flex;
+			align-self: center;
+			gap: 12px;
+			width: 100%;
+			padding: 0 66px;
+
+		}
+	}
+
+	// .competencies__menu-mob
+	&__menu-mob {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		margin-bottom: 2px;
+
+		@media (min-width:1000px) {
+			display: none;
+		}
+
+
+	}
+}

@@ -1,0 +1,84 @@
+.about {
+
+	// .about__wrapper
+	&__wrapper {
+		position: relative;
+	}
+
+	// .about__box-text
+	&__box-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		background: rgba(0, 0, 0, 0.41);
+		backdrop-filter: blur(8px);
+
+		width: 280px;
+		height: 78px;
+
+		position: absolute;
+		top: 24%;
+		left: 50%;
+		transform: translate(-50%);
+
+		@media (min-width:1000px) {
+			width: 531px;
+			height: 137px;
+
+		}
+
+	}
+
+	// .about__title
+	&__title {
+		font-size: 25px;
+		font-weight: 400;
+		line-height: 130%;
+		text-transform: uppercase;
+
+		@media (min-width:1000px) {
+			font-size: 50px;
+		}
+
+	}
+
+	// .about__subtitle
+	&__subtitle {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 130%;
+
+		@media (min-width:1000px) {
+			font-size: 25px;
+		}
+
+	}
+
+
+}
+
+video[poster] {
+
+
+	@media (min-width:1000px) {
+		@include background (url("./../img/about/about-poster.jpg"));
+	}
+}
+
+.title {}
+
+.subtitle {}
+
+.video {
+	width: 100%;
+	max-height: 278px;
+	border: 20px solid $bgColor;
+
+	@media (min-width:1000px) {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+		max-height: 1093px;
+	}
+
+}

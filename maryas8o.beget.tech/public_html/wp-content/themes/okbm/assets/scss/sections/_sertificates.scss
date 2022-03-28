@@ -1,0 +1,54 @@
+.sertificates {
+	padding: 50px 0 90px;
+
+	@media (min-width:1000px) {
+		padding: 85px 0 172px;
+	}
+
+
+	// .sertificates__wrapper
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	// .sertificates__title
+	&__title {
+
+		font-weight: 400;
+		font-size: 25px;
+		line-height: 130%;
+		text-align: center;
+		text-transform: uppercase;
+
+		margin-bottom: 30px;
+
+		color: #263A93;
+
+		@media (min-width:1000px) {
+			font-size: 50px;
+			margin-bottom: 40px;
+		}
+
+
+	}
+}
+
+.container {}
+
+.title {}
+
+.swiper {
+	margin: 0 auto;
+
+	img {
+		width: 133px;
+		height: 204px;
+
+		@media (min-width:1000px) {
+			width: 462px;
+			height: 702px;
+		}
+	}
+}
