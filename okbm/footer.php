@@ -1,60 +1,47 @@
 <footer class="footer">
-			<div class="footer__container">
-				<div class="footer__body">
-					<div class="footer__row">
-						<a href="<?php bloginfo( 'url' ); ?>" class="footer__logo logo ">
-							<div class="logo__body _icon-logo">
-								<p>Международная<br>академия проработок<br>«Tandi»</p>
-							</div>
-						</a>
-						<div class="footer__social social">
-							<div class="social__title">Мы в соцсетях</div>
-							<ul class="social__list">
-								<li class="social__item">
-									<a class="_icon-youtube" href="#"></a>
-								</li>
-								<li class="social__item">
-									<a class="_icon-insta" href="#"></a>
-								</li>
-								<li class="social__item">
-									<a class="_icon-facebook" href="#"></a>
-								</li>
-								<li class="social__item">
-									<a class="_icon-vk" href="#"></a>
-								</li>
-								<li class="social__item">
-									<a class="_icon-telegram" href="#"></a>
-								</li>
-							</ul>
-						</div>
-						<a href="mailto:info@tandischool.getcourse.ru" class="footer__mail">info@tandischool.getcourse.ru</a>
-						<div class="footer__question">
-							<a href="tel:+79954462095" class="footer__phone">+7 (995) 446-20-95</a>
-							<p class="footer__question-text">по общим вопросам и<br> вопросам обучения</p>
-						</div>
-					</div>
-					<div class="footer__row">
-						<nav class="footer__nav nav-footer">
-							<?php wp_nav_menu( [
-								'theme_location'  => 'footer_menu',
-								'container'       => null,
-								'menu_class'      => 'nav-footer__list',
-								'menu_id'         => 'nav-footer',
-							] ); ?>
-						</nav>
-					</div>
-					<div class="footer__row">
-						<div class="footer__copy">© Tandi 2022</div>
-						<div class="footer__info">
-							<a target="_blank" href="https://tandischool.ru/dogovoroffert">Оферта</a>
-							<a target="_blank" href="http://tandiroom.ru/privacy">Политика конфиденциальности</a>
-						</div>
-					</div>
+	<div class="container">
+		<div class="footer__grid">
+			<div class="footer__box-logo">
+				<div class="footer__logo logo"><?php echo get_custom_logo(); ?>
+
+				</div>
+				<p class="footer__text">Все права защищены 2022 год</p>
+			</div>
+			<div class="footer__contacts">
+				<div class="footer__wrap">
+					<h4 class="footer__title title">Телефон/факс:</h4>
+					<a class="footer__tel" href="tel:++7(473) 200 10 45">+7 (473) 200 10 45</a>
+				</div>
+				<a class="footer__mail" href="mailto:okbm@okbm.ru">okbm@okbm.ru</a>
+			</div>
+			<div class="footer__legal-address">
+				<h4 class="footer__title title">Юридический адрес</h4>
+				<a href="https://yandex.by/maps/-/CCUBeQXChD" target="_blank">394055, г. Воронеж, ул. Ворошилова, д.
+					22</a>
+			</div>
+			<div class="footer__fact-address">
+				<h4 class="footer__title title">Фактический адрес</h4>
+				<a href="https://yandex.by/maps/-/CCUBeQtXCC" target="_blank">Воронежская область, Айдаровское
+					сельское поселение, улица Промышленная, зона 2, ОКБМ, участок №4.</a>
+			</div>
+			<div class="footer__working-hours">
+				<h4 class="footer__title title">Время работы</h4>
+				<div class="footer__block">
+					<span class="footer__weekdays">Пн-Пт: 08.00 - 16.30</span>
+					<span class="footer__weekand">Сб-Вскр: Выходные</span>
 				</div>
 			</div>
-		</footer>
+		</div>
 	</div>
-	<?php wp_footer(); ?>
+	<div class="footer__box-logo footer__box-logo--mob">
+		<div class="footer__logo logo"><?php echo get_custom_logo(); ?>
+
+		</div>
+		<p class="footer__text">Все права защищены 2022 год</p>
+	</div>
+</footer>
+
+<?php wp_footer(); ?>
 </body>
 
 </html>

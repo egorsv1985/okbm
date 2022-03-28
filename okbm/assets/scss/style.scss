@@ -1,0 +1,44 @@
+/**
+  * Theme Name:  OKBM
+  * Version:     1.0
+  */
+
+// abstracts
+
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// base
+@import "./base/normalize";
+
+@import "fonts";
+@import "./base/btn";
+@import "./base/sections";
+@import "./base/tipography";
+
+
+// pages
+@import "./pages/competencies";
+
+// components
+
+
+@import "./sections/about";
+@import "./sections/description";
+@import "./sections/primary";
+@import "./sections/sertificates";
+@import "./sections/title-page";
+@import "./sections/manager";
+@import "./sections/manager-desc";
+
+
+
+// block
+@import "./blocks/header";
+
+@import "./blocks/block-text";
+@import "./blocks/list-text";
+@import "./blocks/menu";
+@import "./blocks/menu-list";
+
+@import "./blocks/footer";

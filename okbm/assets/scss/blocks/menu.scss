@@ -1,0 +1,22 @@
+.menu-top {
+	span {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 130%;
+
+		@media (min-width:1000px) {
+			font-size: 30px;
+		}
+	}
+
+	// .menu-top__list
+	&__list {
+		display: none;
+	}
+
+	// .menu-top__item
+	&__item {}
+
+	// .menu__link
+	&__link-top {}
+}
