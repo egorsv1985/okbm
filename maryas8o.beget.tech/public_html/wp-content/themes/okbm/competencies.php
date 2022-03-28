@@ -38,7 +38,7 @@ Template Name: Компетенции
 			foreach ($loop as $row) {
 			?>
 				<div class="description__block-text">
-					<h3 class="description__subtitle subtitle"><?= $row['	zagolovok_opisania_manager'] ?></h3>
+					<h3 class="description__subtitle subtitle"><?= $row['zagolovok_opisania_manager'] ?></h3>
 					<p class="description__text text"><?= $row['opisania_manager_text'] ?></p>
 				</div>
 			<?php
