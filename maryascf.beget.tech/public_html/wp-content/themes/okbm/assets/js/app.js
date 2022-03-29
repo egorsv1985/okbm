@@ -17,7 +17,8 @@ testWebP(function (support) {
 });
 
 let swiper = new Swiper(".primarySwiper", {
+  loop: true,
   pagination: {
-    el: ".swiper-pagination"
+    el: ".primary__swiper-pagination",
   },
 });

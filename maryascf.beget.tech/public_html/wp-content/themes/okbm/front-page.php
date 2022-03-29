@@ -6,42 +6,49 @@ Template Name: Главная
 <?php get_header(); ?>
 
 <section class="primary">
-	<div class="swiper primarySwiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">Slide 1</div>
-			<div class="swiper-slide">Slide 2</div>
-			<div class="swiper-slide">Slide 3</div>
-			<div class="swiper-slide">Slide 4</div>
-			<div class="swiper-slide">Slide 5</div>
-			<div class="swiper-slide">Slide 6</div>
-			<div class="swiper-slide">Slide 7</div>
-			<div class="swiper-slide">Slide 8</div>
-			<div class="swiper-slide">Slide 9</div>
+
+</section>
+
+<div class="primary__swiper primarySwiper">
+	<div class="primary__swiper-wrapper">
+		<?php
+		// var_dump(have_rows('images'));
+		// die();
+		if (have_rows('gallery')) : // если найдены данные 
+			while (have_rows('gallery')) :	the_row(); ?>
+				<!-- цикл по строкам данных -->
+				<div class="primary__slide">
+					<img src="<?php the_sub_field('images'); ?>" alt="" class="primary__image">
+				</div>
+		<?php endwhile;
+
+		else :
+		// строки не найдены 
+		endif;
+		?>
+	</div>
+</div>
+<div class="primary__swiper-pagination"></div>
+</div>
+
+<div class="container">
+	<div class="primary__wrapper">
+		<h1 class="primary__title title"></h1>
+		<div class="primary__wrap">
+			<h2 class="primary__subtitle subtitle">ГОД ОСНОВАНИЯ 1960</h2>
+			<p class="primary__desc">Более 60 лет на рынке</p>
 		</div>
-		<div class="swiper-pagination"></div>
+		<?php wp_nav_menu(
+			array(
+				'theme_location' => 'primary-menu',
+				'menu_class' => 'primary__menu menu',
+				'menu_id' => 'primary',
+			)
+		);
+		?>
+		<php wp_nav_menu(); ?>
 	</div>
-	</div>
-
-
-
-	<div class="container">
-		<div class="primary__wrapper">
-			<h1 class="primary__title title"></h1>
-			<div class="primary__wrap">
-				<h2 class="primary__subtitle subtitle">ГОД ОСНОВАНИЯ 1960</h2>
-				<p class="primary__desc">Более 60 лет на рынке</p>
-			</div>
-			<?php wp_nav_menu(
-				array(
-					'theme_location' => 'primary-menu',
-					'menu_class' => 'primary__menu menu',
-					'menu_id' => 'primary',
-				)
-			);
-			?>
-			<php wp_nav_menu(); ?>
-		</div>
-	</div>
+</div>
 </section>
 <?php wp_nav_menu(
 	array(
@@ -59,11 +66,13 @@ Template Name: Главная
 			<h3 class="about__subtitle subtitle">Видео презентация компании ОКБМ</h3>
 		</div>
 		<div class="video">
-			<?php the_field('video') ?>
+			<?php the_field('title'); ?>
 		</div>
 
 	</div>
 </section>
+
+
 
 <section class="description description--bg">
 	<h2 class="description__title title title--page"></h2>
@@ -88,5 +97,5 @@ Template Name: Главная
 
 		</div>
 	</div>
-</section>
+</section> -->
 <?php get_footer(); ?>

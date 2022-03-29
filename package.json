@@ -14,7 +14,8 @@
   "author": "Sabancev Egor",
   "license": "ISC",
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "browser-sync": "latest",
