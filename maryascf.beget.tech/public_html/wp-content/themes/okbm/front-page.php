@@ -6,50 +6,50 @@ Template Name: Главная
 <?php get_header(); ?>
 
 <section class="primary">
+	<div class="primary__swiper primarySwiper">
+		<div class="primary__swiper-wrapper">
+			<?php
+			// var_dump(have_rows('images'));
+			// die();
+			if (have_rows('gallery')) : // если найдены данные 
+				while (have_rows('gallery')) :	the_row(); ?>
+					<!-- цикл по строкам данных -->
+					<div class="primary__slide">
+						<img src="<?php the_sub_field('images'); ?>" alt="" class="primary__image">
+					</div>
+			<?php endwhile;
 
-</section>
-
-<div class="primary__swiper primarySwiper">
-	<div class="primary__swiper-wrapper">
-		<?php
-		// var_dump(have_rows('images'));
-		// die();
-		if (have_rows('gallery')) : // если найдены данные 
-			while (have_rows('gallery')) :	the_row(); ?>
-				<!-- цикл по строкам данных -->
-				<div class="primary__slide">
-					<img src="<?php the_sub_field('images'); ?>" alt="" class="primary__image">
-				</div>
-		<?php endwhile;
-
-		else :
-		// строки не найдены 
-		endif;
-		?>
-	</div>
-</div>
-<div class="primary__swiper-pagination"></div>
-</div>
-
-<div class="container">
-	<div class="primary__wrapper">
-		<h1 class="primary__title title"></h1>
-		<div class="primary__wrap">
-			<h2 class="primary__subtitle subtitle">ГОД ОСНОВАНИЯ 1960</h2>
-			<p class="primary__desc">Более 60 лет на рынке</p>
+			else :
+			// строки не найдены 
+			endif;
+			?>
 		</div>
-		<?php wp_nav_menu(
-			array(
-				'theme_location' => 'primary-menu',
-				'menu_class' => 'primary__menu menu',
-				'menu_id' => 'primary',
-			)
-		);
-		?>
-		<php wp_nav_menu(); ?>
 	</div>
-</div>
+	<div class="primary__swiper-pagination"></div>
+	</div>
+
+	<div class="container">
+		<div class="primary__wrapper">
+			<h1 class="primary__title title"></h1>
+			<div class="primary__wrap">
+				<h2 class="primary__subtitle subtitle">ГОД ОСНОВАНИЯ 1960</h2>
+				<p class="primary__desc">Более 60 лет на рынке</p>
+			</div>
+			<?php wp_nav_menu(
+				array(
+					'theme_location' => 'primary-menu',
+					'menu_class' => 'primary__menu menu',
+					'menu_id' => 'primary',
+				)
+			);
+			?>
+			<php wp_nav_menu(); ?>
+		</div>
+	</div>
 </section>
+
+
+
 <?php wp_nav_menu(
 	array(
 		'theme_location' => 'primary-menu',
