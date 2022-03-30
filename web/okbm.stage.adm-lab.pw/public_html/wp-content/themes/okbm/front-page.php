@@ -6,24 +6,8 @@ Template Name: Главная
 <?php get_header(); ?>
 
 <section class="primary">
-	<div class="primary__swiper primarySwiper">
-		<div class="primary__swiper-wrapper">
-			<?php
-			if (have_rows('gallery')) { // если найдены данные 
-				while (have_rows('gallery')) {
-					the_row(); ?>
-					<img class="manager__img" src="<?php the_sub_field('images'); ?>" alt="<?php the_sub_field('images'['alt']); ?>" title="<?php the_sub_field('images'['title']); ?>">
 
-			<?php	}
-			} else {
-				// строки не найдены 
-			}
-			?>
-
-		</div>
-	</div>
-	<div class="primary__swiper-pagination"></div>
-	</div>
+	<?php echo do_shortcode('[metaslider id="117"]'); ?>
 
 	<div class="container">
 		<div class="primary__wrapper">
@@ -68,7 +52,6 @@ Template Name: Главная
 </section>
 
 
-
 <section class="manager manager--bg">
 	<h2 class="manager__title title title--page"><?php the_field('title'); ?></h2>
 	<div class="manager__wrapper">
@@ -88,9 +71,9 @@ Template Name: Главная
 			if (have_rows('description_manager')) { // если найдены данные 
 				while (have_rows('description_manager')) {
 					the_row(); ?>
-					<div class="description__block-text">
-						<h4 class="description__subtitle subtitle"><?php the_sub_field('title_description'); ?></h4>
-						<p class="description__text text"><?php the_sub_field('description_text'); ?></p>
+					<div class="manager__block-text">
+						<h4 class="manager__subtitle-home subtitle"><?php the_sub_field('title_description'); ?></h4>
+						<p class="manager__text text"><?php the_sub_field('description_text'); ?></p>
 					</div>
 
 			<?php	}
@@ -100,5 +83,18 @@ Template Name: Главная
 			?>
 		</div>
 	</div>
-</section> -->
+</section>
+<section class="sertificates">
+	<div class="container">
+		<div class="sertificates__wrapper">
+			<h2 class="sertificates__title title">Лицензии и сертификаты</h2>
+			<div class="swiper">
+				<?php echo do_shortcode('[metaslider id="133"]'); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
 <?php get_footer(); ?>

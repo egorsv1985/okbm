@@ -15,10 +15,8 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp');
   }
 });
-
-let swiper = new Swiper(".primarySwiper", {
-  loop: true,
+var swiper = new Swiper(".mySwiper", {
   pagination: {
-    el: ".primary__swiper-pagination",
+    el: ".swiper-pagination",
   },
 });
