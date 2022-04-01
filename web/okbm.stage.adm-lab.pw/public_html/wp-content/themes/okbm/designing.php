@@ -16,35 +16,35 @@ Template Name: Проектирование
 	</div>
 </div>
 <div class="container">
-	<h2 class="title-page title">проектирование</h2>
+	<h2 class="title-page title"><?php the_title(); ?></h2>
 </div>
 
-<section class="manager">
+<section class="manager manager--page">
 	<div class="container">
-		<div class="manager__photo">
-			<img class="manager__img" src="<?php the_field('foto_manager'); ?>" alt="<?php the_field('foto_manager'['alt']); ?>" title="<?php the_field('foto_manager'['title']); ?>">
-			<div class="manager__img-desc">
-
-				<h3 class="manager__name"><?php the_field('name_manager'); ?></h3>
-				<p class="manager__position"><?php the_field('position_manager'); ?></p>
+		<div class="manager__wrapper">
+			<div class="manager__photo">
+				<img class="manager__img" src="<?php the_field('foto_menedzhera'); ?>" alt="<?php the_field('foto_menedzhera'['alt']); ?>" title="<?php the_field('foto_menedzhera'['title']); ?>">
+				<div class="manager__img-desc">
+					<h3 class="manager__name"><?php the_field('imya_menedzhera'); ?></h3>
+					<p class="manager__position"><?php the_field('dolzhnost_menedzhera'); ?></p>
+				</div>
 			</div>
-		</div>
+			<div class="manager__inner">
+				<?php
+				if (have_rows('opisanie_menedzhera')) { // если найдены данные 
+					while (have_rows('opisanie_menedzhera')) {
+						the_row(); ?>
+						<div class="manager__block-text">
+							<h4 class="manager__subtitle-home subtitle"><?php the_sub_field('zagolovok_opisaniya'); ?></h4>
+							<p class="manager__text text"><?php the_sub_field('opisanie_tekst'); ?></p>
+						</div>
 
-		<div class="manager__inner">
-			<?php
-			if (have_rows('description_manager')) { // если найдены данные 
-				while (have_rows('description_manager')) {
-					the_row(); ?>
-					<div class="manager__block-text">
-						<h4 class="manager__subtitle-home subtitle"><?php the_sub_field('title_description'); ?></h4>
-						<p class="manager__text text"><?php the_sub_field('description_text'); ?></p>
-					</div>
-
-			<?php	}
-			} else {
-				// строки не найдены 
-			}
-			?>
+				<?php	}
+				} else {
+					// строки не найдены 
+				}
+				?>
+			</div>
 		</div>
 	</div>
 </section>
@@ -54,11 +54,12 @@ Template Name: Проектирование
 		<ul class="list-text__list">
 			<li class="list-text__item">
 				<?php
-				if (have_rows('blok_texta_nad_kartinkoy')) { // если найдены данные 
-					while (have_rows('blok_texta_nad_kartinkoy')) {
+				if (have_rows('blok_teksta_nad_kartinkoj')) { // если найдены данные 
+					while (have_rows('blok_teksta_nad_kartinkoj')) {
 						the_row(); ?>
-						<div class="manager__block-text">
-							<p class="list-text__title title"><?php the_sub_field('text_nad_kartinkoy'); ?></p>
+						<div class="list-text__block-text">
+							<p class="list-text__paragraph text"><?php the_sub_field('tekst_nad_kartinkoj'); ?></p>
+
 						</div>
 
 				<?php	}
@@ -66,8 +67,6 @@ Template Name: Проектирование
 					// строки не найдены 
 				}
 				?>
-
-
 			</li>
 
 		</ul>
@@ -78,10 +77,8 @@ Template Name: Проектирование
 
 <section class="images">
 	<div class="container">
-		<img class="manager__img" src="<?php the_field('images'); ?>" alt="<?php the_field('images'['alt']); ?>" title="<?php the_field('images'['title']); ?>">
+		<img src="<?php the_field('kartinka'); ?>" alt="" title="">
 	</div>
-
-
 </section>
 
 <section class="list-text">
@@ -89,11 +86,12 @@ Template Name: Проектирование
 		<ul class="list-text__list">
 			<li class="list-text__item">
 				<?php
-				if (have_rows('blok_texta_pod_kartinkoy')) { // если найдены данные 
-					while (have_rows('blok_texta_pod_kartinkoy')) {
+				if (have_rows('blok_teksta_pod_kartinkoj')) { // если найдены данные 
+					while (have_rows('blok_teksta_pod_kartinkoj')) {
 						the_row(); ?>
-						<div class="manager__block-text">
-							<p class="list-text__title title"><?php the_sub_field('text_pod_kartinkoy'); ?></p>
+						<div class="list-text__block-text">
+							<p class="list-text__paragraph text"><?php the_sub_field('tekst_pod_kartinkoj'); ?></p>
+
 						</div>
 
 				<?php	}

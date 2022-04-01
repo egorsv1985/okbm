@@ -520,7 +520,7 @@ template {
 }
 
 .manager--page {
-  padding: 20px 0 50px;
+  padding: 20px 0 30px;
 }
 
 .nowebp .manager--bg {
@@ -548,6 +548,8 @@ template {
   padding: 0;
   margin: 0;
 }
+
+
 
 .manager .title {
 
@@ -642,12 +644,18 @@ template {
   height: max-content;
 }
 
+.manager__block-text {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
 .manager__subtitle-home {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   color: #000;
-  margin-bottom: 20px;
+
 }
 
 .manager__text {
@@ -1130,7 +1138,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 .list-text__block-text {}
 
 .list-text__title {
-  font-family: "Roboto Condensed";
+
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -1139,7 +1147,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 }
 
 .list-text__paragraph {
-  font-family: "Roboto Condensed";
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1420,8 +1428,28 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     width: 100%;
   }
 
+  .title-page {
+
+    font-size: 50px;
+    line-height: 130%;
+
+  }
+
+  .title-page::before {
+
+    width: 40px;
+    height: 5px;
+    left: -2%;
+
+
+  }
+
   .manager {
     padding: 100px 0 115px;
+  }
+
+  .manager--page {
+    padding: 40px 0 50px;
   }
 
   .manager__wrapper {
@@ -1477,6 +1505,10 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     line-height: 35px;
   }
 
+  .galery {
+    max-width: 1424px;
+    margin: 0 auto;
+  }
 
   .primary {
 
@@ -1499,8 +1531,17 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     height: 700px;
   }
 
+  #metaslider_142 img {
+    height: 591px;
+  }
+
   #metaslider-id-133.metaslider .theme-default .nivo-controlNav {
     padding: 50px 0 30px !important;
+
+  }
+
+  #metaslider-id-142.metaslider .theme-default .nivo-controlNav {
+    padding: 40px 0 !important;
 
   }
 
@@ -1561,6 +1602,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 
   .competencies__menu {
     position: static;
+    padding: 0;
   }
 
   .menu-mob {
@@ -1651,10 +1693,26 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 
   }
 
+  .manager--page .manager__inner {
+
+    height: 619px;
+    justify-content: center;
+    padding-left: 50px;
+    border: 20px solid #263A93;
+    border-left: none;
+  }
+
+
+  .manager__block-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 840px;
+  }
+
   .manager .subtitle {
     font-size: 25px;
     line-height: 35px;
-    margin-bottom: 35px;
+
   }
 
   .manager-desc {
@@ -1800,6 +1858,35 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     height: 60px;
   }
 
+  .list-text {
+    padding: 50px 0 80px;
+  }
+
+  .list-text__item {
+    gap: 38px;
+  }
+
+  .list-text__block-text {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .list-text__title {
+
+    font-size: 25px;
+    line-height: 35px;
+
+    text-indent: 1.6em;
+  }
+
+  .list-text__paragraph {
+
+    font-size: 25px;
+    line-height: 35px;
+
+  }
+
   .footer {
     padding: 100px 0 65px;
   }
@@ -1917,7 +2004,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   }
 
   .breadcrumb {
-    padding: 140px 0 20px;
+    padding: 140px 0 40px;
 
   }
 
@@ -1946,12 +2033,41 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 
 
 
-@media (min-width: 1424px) {
+@media (min-width: 1444px) {
   .container {
-    padding: 0 140px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .title-page::before {
+
+    left: -4%;
+
+
   }
 }
 
 .webp .manager--bg {
   background-image: url(./../img/manager/description-bg.jpg);
+}
+
+@media (min-width: 768px) {
+  .title-page::before {
+
+
+    left: -3%;
+
+
+  }
+}
+
+@media (min-width: 330px) {
+  .title-page::before {
+
+
+    left: -2%;
+
+
+  }
 }

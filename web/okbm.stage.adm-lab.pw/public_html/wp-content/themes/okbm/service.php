@@ -1,11 +1,9 @@
 <?php
 /*
-Template Name: Проектирование
+Template Name: Дочерние предприятия
 */
 ?>
-
 <?php get_header(); ?>
-
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb__wrapper">
@@ -20,37 +18,6 @@ Template Name: Проектирование
 <div class="container">
 	<h2 class="title-page title"><?php the_title(); ?></h2>
 </div>
-
-<section class="manager manager--page">
-	<div class="container">
-		<div class="manager__wrapper">
-			<div class="manager__photo">
-				<img class="manager__img" src="<?php the_field('foto_menedzhera'); ?>" alt="<?php the_field('foto_menedzhera'['alt']); ?>" title="<?php the_field('foto_menedzhera'['title']); ?>">
-				<div class="manager__img-desc">
-					<h3 class="manager__name"><?php the_field('imya_menedzhera'); ?></h3>
-					<p class="manager__position"><?php the_field('dolzhnost_menedzhera'); ?></p>
-				</div>
-			</div>
-			<div class="manager__inner">
-				<?php
-				if (have_rows('opisanie_menedzhera')) { // если найдены данные 
-					while (have_rows('opisanie_menedzhera')) {
-						the_row(); ?>
-						<div class="manager__block-text">
-							<h4 class="manager__subtitle-home subtitle"><?php the_sub_field('zagolovok_opisaniya'); ?></h4>
-							<p class="manager__text text"><?php the_sub_field('opisanie_tekst'); ?></p>
-						</div>
-
-				<?php	}
-				} else {
-					// строки не найдены 
-				}
-				?>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="list-text">
 	<div class="container">
 		<ul class="list-text__list">
@@ -109,4 +76,5 @@ Template Name: Проектирование
 
 	</div>
 </section>
+
 <?php get_footer(); ?>

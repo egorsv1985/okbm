@@ -28,7 +28,6 @@ Template Name: Главная
 	</div>
 	</div>
 </section>
-
 <?php wp_nav_menu(
 	array(
 		'theme_location' => 'primary-menu',
@@ -37,7 +36,6 @@ Template Name: Главная
 	)
 );
 ?>
-
 <section class="about">
 	<div class="about__wrapper">
 		<div class="about__box-text">
@@ -50,8 +48,6 @@ Template Name: Главная
 
 	</div>
 </section>
-
-
 <section class="manager manager--bg">
 	<h2 class="manager__title title manager__title--desktop"><?php the_field('zagolovok'); ?></h2>
 	<div class="manager__wrapper">
@@ -98,7 +94,4 @@ Template Name: Главная
 		</div>
 	</div>
 </section>
-
-
-
 <?php get_footer(); ?>

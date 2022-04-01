@@ -16,31 +16,27 @@ Template Name: Компетенции
 	</div>
 </div>
 <div class="container">
-	<h2 class="title-page title">Компетенции</h2>
+	<h2 class="title-page title"><?php the_title(); ?></h2>
 </div>
+
 <section class="manager manager--page">
-
-
-
-	<div class="manager__wrapper">
-		<div class="container">
+	<div class="container">
+		<div class="manager__wrapper">
 			<div class="manager__photo">
-				<img class="manager__img" src="<?php the_field('foto_menedzhera'); ?>" alt="<?php the_field('foto_menedzhera'['alt']); ?>" title="<?php the_field('foto_menedzhera'['title']); ?>">
+				<img class="manager__img" src="<?php the_field('foto_menedzhera'); ?>" alt="" title="">
 				<div class="manager__img-desc">
-
 					<h3 class="manager__name"><?php the_field('imya_menedzhera'); ?></h3>
 					<p class="manager__position"><?php the_field('dolzhnost_menedzhera'); ?></p>
 				</div>
 			</div>
-
 			<div class="manager__inner">
 				<?php
 				if (have_rows('opisanie_menedzhera')) { // если найдены данные 
 					while (have_rows('opisanie_menedzhera')) {
 						the_row(); ?>
 						<div class="manager__block-text">
-							<h4 class="manager__subtitle-home subtitle"><?php the_sub_field('zagolovok_opisaniya_menedzhera'); ?></h4>
-							<p class="manager__text text"><?php the_sub_field('tekst_opisaniya_menedzhera'); ?></p>
+							<h4 class="manager__subtitle-home subtitle"><?php the_sub_field('zagolovok_opisaniya'); ?></h4>
+							<p class="manager__text text"><?php the_sub_field('opisanie_tekst'); ?></p>
 						</div>
 
 				<?php	}
@@ -82,7 +78,6 @@ Template Name: Компетенции
 	);
 	?>
 </section>
-
 <section class="list-text">
 	<div class="container">
 		<ul class="list-text__list">
@@ -97,11 +92,7 @@ Template Name: Компетенции
 							if (have_rows('testovyj_blok')) { // если найдены данные 
 								while (have_rows('testovyj_blok')) {
 									the_row(); ?>
-
 									<p class="list-text__paragraph text"><?php the_sub_field('tekst'); ?></p>
-
-
-
 							<?php	}
 							} else {
 								// строки не найдены 
@@ -114,13 +105,12 @@ Template Name: Компетенции
 					// строки не найдены 
 				}
 				?>
-
-
 			</li>
 
 		</ul>
 
 	</div>
 </section>
+
 
 <?php get_footer(); ?>

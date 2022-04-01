@@ -16,20 +16,20 @@ Template Name: Дочерние предприятия
 	</div>
 </div>
 <div class="container">
-	<h2 class="title-page title">Дочерние предприятия</h2>
+	<h2 class="title-page title"><?php the_title(); ?></h2>
 </div>
-
 
 <section class="list-text">
 	<div class="container">
 		<ul class="list-text__list">
 			<li class="list-text__item">
 				<?php
-				if (have_rows('blok_texta_nad_kartinkoy')) { // если найдены данные 
-					while (have_rows('blok_texta_nad_kartinkoy')) {
+				if (have_rows('blok_teksta_nad_kartinkoj')) { // если найдены данные 
+					while (have_rows('blok_teksta_nad_kartinkoj')) {
 						the_row(); ?>
-						<div class="manager__block-text">
-							<p class="list-text__title title"><?php the_sub_field('text_nad_kartinkoy'); ?></p>
+						<div class="list-text__block-text">
+							<p class="list-text__paragraph text"><?php the_sub_field('tekst_nad_kartinkoj'); ?></p>
+
 						</div>
 
 				<?php	}
@@ -37,8 +37,6 @@ Template Name: Дочерние предприятия
 					// строки не найдены 
 				}
 				?>
-
-
 			</li>
 
 		</ul>
@@ -49,10 +47,8 @@ Template Name: Дочерние предприятия
 
 <section class="images">
 	<div class="container">
-		<img class="manager__img" src="<?php the_field('images'); ?>" alt="<?php the_field('images'['alt']); ?>" title="<?php the_field('images'['title']); ?>">
+		<img src="<?php the_field('kartinka'); ?>" alt="" title="">
 	</div>
-
-
 </section>
 
 <section class="list-text">
@@ -60,11 +56,12 @@ Template Name: Дочерние предприятия
 		<ul class="list-text__list">
 			<li class="list-text__item">
 				<?php
-				if (have_rows('blok_texta_pod_kartinkoy')) { // если найдены данные 
-					while (have_rows('blok_texta_pod_kartinkoy')) {
+				if (have_rows('blok_teksta_pod_kartinkoj')) { // если найдены данные 
+					while (have_rows('blok_teksta_pod_kartinkoj')) {
 						the_row(); ?>
-						<div class="manager__block-text">
-							<p class="list-text__title title"><?php the_sub_field('text_pod_kartinkoy'); ?></p>
+						<div class="list-text__block-text">
+							<p class="list-text__paragraph text"><?php the_sub_field('tekst_pod_kartinkoj'); ?></p>
+
 						</div>
 
 				<?php	}
