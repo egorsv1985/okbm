@@ -55,7 +55,10 @@ Template Name: Главная
 <section class="manager manager--bg">
 	<h2 class="manager__title title manager__title--desktop"><?php the_field('zagolovok'); ?></h2>
 	<div class="manager__wrapper">
+
 		<div class="container">
+
+
 			<h2 class="manager__title title manager__title--mob"><?php the_field('zagolovok'); ?></h2>
 			<div class="manager__photo">
 				<img class="manager__img" src="<?php the_field('foto_menedzhera'); ?>" alt="<?php the_field('foto_menedzhera'['alt']); ?>" title="<?php the_field('foto_menedzhera'['title']); ?>">
@@ -66,6 +69,7 @@ Template Name: Главная
 				</div>
 			</div>
 		</div>
+
 		<div class="manager__inner">
 			<?php
 			if (have_rows('opisanie_menedzhera')) { // если найдены данные 
