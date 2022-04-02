@@ -1,3 +1,12 @@
+import Swiper, {
+	Navigation,
+	Pagination,
+	Scrollbar
+} from 'swiper';
+
+// Now you can use Swiper
+const swiper = new Swiper('.swiper', {});
+
 function testWebP(callback) {
 
 	var webP = new Image();
@@ -15,7 +24,6 @@ testWebP(function (support) {
 		document.querySelector('body').classList.add('no-webp');
 	}
 });
-
 
 // Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
@@ -64,23 +72,28 @@ export let bodyLock = (delay = 500) => {
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
-	let iconMenu = document.querySelector(".menu-top");
+	let iconMenu = document.querySelector(".header__menu");
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
 			if (bodyLockStatus) {
 				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-top--open");
+				document.documentElement.classList.toggle("open-menu");
 			}
 		});
 	};
 }
 export function menuOpen() {
 	bodyLock();
-	document.documentElement.classList.add("menu-top--open");
+	document.documentElement.classList.add("open-menu");
 }
 export function menuClose() {
-	bodyUnlock();
-	document.documentElement.classList.remove("menu-top--open");
+	let closemenu = document.querySelector(".menu-open__closemenu");
+	if (closemenu) {
+		closemenu.addEventListener("click", function (e) {
+			document.documentElement.classList.remove("open-menu");
+		})
+	}
+
 }
 
 menuInit();

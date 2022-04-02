@@ -820,6 +820,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   background: #263A93;
   padding: 0 20px 0 75px;
   position: relative;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -837,16 +838,13 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   gap: 18px;
   width: 100%;
   max-width: 160px;
-
-
-
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
 }
 
-.menu-mob li::before,
-.menu li::before {
+.menu-mob a::before,
+.menu a::before {
   content: "";
   display: block;
   position: absolute;
@@ -1513,6 +1511,10 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   .primary {
 
     padding: 100px 0 30px;
+    
+  }
+  #metaslider-id-117{
+    height: 420px;
   }
 
   #metaslider-id-117.metaslider .theme-default .nivo-controlNav {
@@ -1526,7 +1528,9 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     height: 17px;
   }
 
-
+  #metaslider-id-117{
+    height: 843px;
+  }
   #metaslider_133 img {
     height: 700px;
   }

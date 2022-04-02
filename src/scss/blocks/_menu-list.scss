@@ -52,14 +52,12 @@
 
 	// .menu__text
 	&__text {
-
-
-		font-family: 'Roboto Condensed';
-
 		font-weight: 400;
-		font-size: 25px;
+		font-size: 14px;
 		line-height: 130%;
+		text-transform: uppercase;
 		color: $textColor;
-
+		@media (min-width:1000px) {
+			font-size: 25px;}
 	}
 }

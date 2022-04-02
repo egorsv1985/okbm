@@ -7,13 +7,7 @@ Template Name: Главная
 <?php get_header(); ?>
 
 <section class="primary">
-	<?php
-	$img_gallery = get_field('gallery');
-	if ($img_gallery) { ?>
-		<?php foreach ($img_gallery as $img) { ?>
-			<img src="<?php echo esc_url($img['sizes']['medium']); ?>" alt="<?php echo esc_attr($img['alt']); ?>" />
-		<?php } ?>
-	<?php } ?>
+
 	<?php echo do_shortcode('[metaslider id="117"]'); ?>
 	<div class="primary__wrap">
 		<h2 class="primary__subtitle subtitle">ГОД ОСНОВАНИЯ 1960</h2>

@@ -18,7 +18,9 @@ Template Name: Компетенции
 <div class="container">
 	<h2 class="title-page title"><?php the_title(); ?></h2>
 </div>
-
+<div class="img">
+	<?php the_content(); ?>
+</div>
 <section class="manager manager--page">
 	<div class="container">
 		<div class="manager__wrapper">
