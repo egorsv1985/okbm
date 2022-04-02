@@ -15,8 +15,3 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp');
   }
 });
-var swiper = new Swiper(".mySwiper", {
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});

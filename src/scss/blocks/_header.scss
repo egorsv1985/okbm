@@ -143,3 +143,25 @@
 		}
 	}
 }
+//Burger
+html.top-menu--open .full {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 2%;
+    background-color: var(--main);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top left;
+    transform: scale(0);
+    transition: 0.3s ease-out;
+}

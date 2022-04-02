@@ -3,6 +3,7 @@
 Template Name: Главная
 */
 ?>
+
 <?php get_header(); ?>
 
 <section class="primary">
@@ -28,7 +29,6 @@ Template Name: Главная
 	</div>
 	</div>
 </section>
-
 <?php wp_nav_menu(
 	array(
 		'theme_location' => 'primary-menu',
@@ -37,7 +37,6 @@ Template Name: Главная
 	)
 );
 ?>
-
 <section class="about">
 	<div class="about__wrapper">
 		<div class="about__box-text">
@@ -50,12 +49,13 @@ Template Name: Главная
 
 	</div>
 </section>
-
-
 <section class="manager manager--bg">
 	<h2 class="manager__title title manager__title--desktop"><?php the_field('zagolovok'); ?></h2>
 	<div class="manager__wrapper">
+
 		<div class="container">
+
+
 			<h2 class="manager__title title manager__title--mob"><?php the_field('zagolovok'); ?></h2>
 			<div class="manager__photo">
 				<img class="manager__img" src="<?php the_field('foto_menedzhera'); ?>" alt="<?php the_field('foto_menedzhera'['alt']); ?>" title="<?php the_field('foto_menedzhera'['title']); ?>">
@@ -66,6 +66,7 @@ Template Name: Главная
 				</div>
 			</div>
 		</div>
+
 		<div class="manager__inner">
 			<?php
 			if (have_rows('opisanie_menedzhera')) { // если найдены данные 
@@ -94,7 +95,4 @@ Template Name: Главная
 		</div>
 	</div>
 </section>
-
-
-
 <?php get_footer(); ?>

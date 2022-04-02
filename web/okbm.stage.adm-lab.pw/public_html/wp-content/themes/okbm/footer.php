@@ -40,8 +40,10 @@
 		<p class="footer__text">Все права защищены 2022 год</p>
 	</div>
 </footer>
+</div>
 
 <?php wp_footer(); ?>
+
 </body>
 
 </html>
