@@ -504,18 +504,23 @@ template {
   position: relative;
 
 }
+.about__img{
+  min-height: 278px;
+  width: 100%;
+}
 .about__link::before{
   content: "";
   display: block;
   position: absolute;
-  top: 53%;
+  top: 67%;
   right: 50%;
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
   
   background-image: url("./../img/about/about-play.svg");
-  width: 140px;
-  height: 100px;
+  width: 75px;
+  height: 55px;
   transform: translate(50%, -50%);
   
 
@@ -691,15 +696,20 @@ template {
   /* height: 100vh; */
 
 }
-
-#metaslider-id-117.metaslider .theme-default .nivo-controlNav {
+.swiper-banners{
+  min-height: 420px;
+}
+.swiper-banners .swiper-pagination {
   padding: 0 !important;
   position: absolute;
   bottom: 15px;
-  left: 50%;
+ 
   z-index: 10;
 }
-
+.swiper-button-next,
+.swiper-button-prev{
+display: none;
+}
 #metaslider-id-133.metaslider .theme-default .nivo-controlNav {
   padding: 30px 0 50px !important;
 
@@ -713,24 +723,28 @@ template {
   height: 240px;
 }
 
-div.metaslider .slider-wrapper .nivo-controlNav a {
+.swiper-banners .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background: #263A93;
   border-radius: 50%;
+  opacity: 1;
 
 }
-
-.metaslider .theme-default .nivo-controlNav a.active {
+.swiper-banners .swiper-pagination-bullet-active {
   background: #fff;
   border: 1px solid #263A93;
 }
 
-#metaslider_117 img {
-  max-height: 843px;
-  min-height: 420px;
-}
 
+.swiper-banners .swiper-slide__box{
+  height: 420px;
+}
+.swiper-banners .swiper-slide__box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .primary__slider {
 
   width: 100%;
@@ -771,6 +785,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   justify-content: center;
   width: 280px;
   height: 85px;
+  z-index: 2;
   -webkit-backdrop-filter: blur(2.5px);
   backdrop-filter: blur(2.5px);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(74, 89, 156, 0.4)), to(rgba(74, 89, 156, 0.4))), rgba(0, 0, 0, 0.45);
@@ -833,7 +848,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   width: 100%;
   height: 51px;
   background: #263A93;
-  padding: 0 20px 0 75px;
+  padding: 0 20px;
   position: relative;
   cursor: pointer;
 
@@ -850,12 +865,13 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
   width: 100%;
   max-width: 160px;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
+  text-transform: uppercase;
 }
 
 .menu-mob a::before,
@@ -891,7 +907,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 }
 
 .sertificates {
-  padding: 50px 0 0;
+  padding: 50px 0 ;
 }
 
 .sertificates__wrapper {
@@ -1153,6 +1169,9 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   -ms-transform: translate(50%);
   transform: translate(50%);
 }
+html.open-menu .header__menu::before{
+  display: none;
+}
 
 .list-text {
   padding: 32px 0;
@@ -1252,7 +1271,7 @@ html.open-menu .menu-open {
   height: 100vh;
   padding: 5% 0;
   background-color: #263A93;
-  z-index: 999;
+  z-index: 99;
   visibility: hidden;
   opacity: 0;
   -webkit-transform-origin: top left;
@@ -1377,34 +1396,50 @@ html.open-menu .menu-open {
   width: 15px;
   height: 10px;
 }
-
-.menu-open__closemenu {
-  position: absolute;
-  top: 2em;
-  right: 2em;
+html.open-menu .burger {
+  width: 30px;
+  height: 19px;
+  display: block;
   cursor: pointer;
-  width: 25px;
-  height: 50px;
+  position: relative;
+  z-index: 99;
+}
+html.open-menu .burger__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.menu-open__closemenu span {
-  display: block;
+html.open-menu .burger__inner::before,
+html.open-menu .burger__inner::after {
+  content: "";
+  transition: all 0.3s ease 0s;
+  left: 0px;
+  position: absolute;
   width: 100%;
   height: 3px;
-  border-radius: 3px;
   background-color: #fff;
+  border-radius: 9px;
 }
-
-.menu-open__closemenu span:first-child {
-  -webkit-transform: translate(1px, 22px) rotate(-45deg);
-      -ms-transform: translate(1px, 22px) rotate(-45deg);
-          transform: translate(1px, 22px) rotate(-45deg);
+/* html.open-menu .burger__inner::before {
+  top: 0px;
 }
-
-.menu-open__closemenu span:last-child {
-  -webkit-transform: translate(1px, 19px) rotate(45deg);
-      -ms-transform: translate(1px, 19px) rotate(45deg);
-          transform: translate(1px, 19px) rotate(45deg);
+html.open-menu .burger__inner::after {
+  bottom: 0px;
+}
+html.open-menu .burger__inner span {
+  top: calc(50% - 1px);
+} */
+/* html.open-menu .open .burger__inner span {
+  transform: scale(0);
+} */
+html.open-menu .burger__inner::before {
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
+html.open-menu .burger__inner::after {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
 }
 
 .footer {
@@ -1632,9 +1667,20 @@ html.open-menu .menu-open {
   .about__box-text {
     width: 531px;
     height: 137px;
-    top: 33%;
+    top:24%;
   }
-
+  
+  .about__link::before{
+  
+    top: 53%;
+    right: 50%;
+    
+    width: 77px;
+    height: 55px;
+    
+    
+  
+  }
   .about__title {
     font-size: 50px;
   }
@@ -1744,24 +1790,29 @@ html.open-menu .menu-open {
     padding: 100px 0 30px;
     
   }
-  #metaslider-id-117{
-    height: 420px;
+  .swiper-banners{
+    min-height: 420px;
   }
-
-  #metaslider-id-117.metaslider .theme-default .nivo-controlNav {
+  .swiper-banners .swiper-slide__box{
+    height: 843px;
+  }
+ .swiper-pagination {
 
     bottom: 270px;
 
   }
 
-  div.metaslider .slider-wrapper .nivo-controlNav a {
+  .swiper-banners .swiper-pagination-bullet {
     width: 17px;
     height: 17px;
   }
-
-  #metaslider-id-117{
-    height: 843px;
+  .swiper-banners .swiper-pagination{
+    bottom: 270px;
   }
+  .swiper-button-next,
+.swiper-button-prev{
+display: block;
+}
   #metaslider_133 img {
     height: 700px;
   }
@@ -1824,6 +1875,7 @@ html.open-menu .menu-open {
     display: flex;
     flex-direction: row;
     width: 100%;
+    z-index: 50;
 
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -1925,10 +1977,10 @@ html.open-menu .menu-open {
     margin-bottom: 40px;
   }
 
-  .swiper img {
+  /* .swiper img {
     width: 462px;
     height: 702px;
-  }
+  } */
 
   .manager__photo {
     margin-bottom: 0;

@@ -16,7 +16,9 @@ Template Name: Главная
 		foreach ($ban as $im) {
 			$banbody .= '
 									<div class="swiper-slide">
+									<div class="swiper-slide__box">
 										<img class="image-fluid" src="' . $im['url'] . '">
+									  </div>
 									  </div>';
 		}
 		$banbody .= '
@@ -114,26 +116,27 @@ Template Name: Главная
 		</div>
 
 	</div>
-</section>
-<?php
-$gal = get_field('sertifikaty', 39);
-$galbody = '';
-if ($gal) {
-	$galbody .= '<div class="swiper-sertificates swiper">
+
+	<?php
+	$gal = get_field('sertifikaty', 39);
+	$galbody = '';
+	if ($gal) {
+		$galbody .= '<div class="swiper-sertificates swiper">
 							<div class="swiper-wrapper">';
-	foreach ($gal as $im) {
-		$galbody .= '
+		foreach ($gal as $im) {
+			$galbody .= '
 									<div class="swiper-slide">
 										<img class="image" src="' . $im['url'] . '">
 									  </div>';
-	}
-	$galbody .= '
+		}
+		$galbody .= '
 							</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 						<div class="swiper-pagination"></div>
 						</div>';
-}
-echo $galbody;
-?>
+	}
+	echo $galbody;
+	?>
+</section>
 <?php get_footer(); ?>

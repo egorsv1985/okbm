@@ -26,16 +26,11 @@
 							<a class="contacts__mail" href="mailto:okbm@okbm.ru">okbm@okbm.ru</a>
 						</div>
 						<div class="header__menu">
-							<nav class="menu-top">
-								<span>Меню</span>
-								<div class="menu-open__closemenu">
-									<span></span>
-									<span></span>
+							<button type="button" class="burger">
+								<div class="burger__inner">
+									<span>Меню</span>
 								</div>
-
-
-
-							</nav>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -65,5 +60,4 @@
 						</div>
 				</div>
 			</div>
-
 		</div>

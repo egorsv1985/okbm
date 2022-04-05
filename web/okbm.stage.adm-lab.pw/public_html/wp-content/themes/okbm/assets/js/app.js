@@ -78,7 +78,7 @@ let bodyLock = (delay = 500) => {
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 function menuInit() {
-  let iconMenu = document.querySelector(".header__menu");
+  let iconMenu = document.querySelector(".burger");
   if (iconMenu) {
     iconMenu.addEventListener("click", function (e) {
       if (bodyLockStatus) {
@@ -91,12 +91,12 @@ function menuInit() {
 
 function menuOpen() {
   bodyLock();
-  document.documentElement.classList.add("open");
+  document.documentElement.classList.add("open-menu");
 }
 
 function menuClose() {
   bodyUnlock();
-  document.documentElement.classList.remove("open");
+  document.documentElement.classList.remove("open-menu");
 }
 
 menuInit();
@@ -114,6 +114,23 @@ const swiper111 = new Swiper('.swiper-sertificates', {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 14
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    }
+  }
 });
 
 const swiper222 = new Swiper('.swiper-banners', {
