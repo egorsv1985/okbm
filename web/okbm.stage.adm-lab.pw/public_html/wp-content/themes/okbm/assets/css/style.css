@@ -454,10 +454,6 @@ template {
 }
 
 
-.video iframe {
-  min-height: 278px;
-  width: 100%;
-}
 
 
 .about__wrapper {
@@ -504,7 +500,26 @@ template {
   font-size: 14px;
   line-height: 130%;
 }
+.about__link{
+  position: relative;
 
+}
+.about__link::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 53%;
+  right: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  background-image: url("./../img/about/about-play.svg");
+  width: 140px;
+  height: 100px;
+  transform: translate(50%, -50%);
+  
+
+}
 .arve {
   width: 100%;
   max-height: 278px;
@@ -901,7 +916,24 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   margin-bottom: 30px;
   color: #263A93;
 }
+.swiper-sertificates{
+  position: relative;
+}
+.swiper-sertificates .swiper-slide {
+  transform: scale(0.8);
+  transition: 0.2s
+}
 
+.swiper-sertificates .swiper-slide.swiper-slide-prev,
+.swiper-sertificates .swiper-slide.swiper-slide-next {
+  transform: scale(0.9);
+
+}
+
+.swiper-sertificates .swiper-slide.swiper-slide-active {
+  transform: scale(1);
+
+}
 /* .swiper {
   margin: 0 auto;
 } */
@@ -1088,6 +1120,7 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
 }
 
 .header__menu {
+  cursor: pointer;
   border: 1px solid #FFF;
   width: 77px;
   height: 33px;
@@ -1201,6 +1234,177 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
   font-size: 25px;
   line-height: 130%;
   color: #fff;
+}
+
+html.open-menu .menu-open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.menu-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 5% 0;
+  background-color: #263A93;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.menu-open__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.menu-open__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.menu-open__contacts {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-weight: 300;
+  line-height: 130%;
+}
+
+.menu-open__contacts::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -17px;
+  left: -18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/header/tel.svg");
+  width: 38px;
+  height: 33px;
+}
+
+.menu-open__contacts::before {
+  display: none;
+}
+
+.menu-open__tel {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.menu-open__tel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/header/tel-pk.svg");
+  width: 15px;
+  height: 15px;
+}
+
+.menu-open__mail {
+  position: relative;
+}
+
+.menu-open__mail::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: -30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/header/mail.svg");
+  width: 15px;
+  height: 10px;
+}
+
+.menu-open__closemenu {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  cursor: pointer;
+  width: 25px;
+  height: 50px;
+}
+
+.menu-open__closemenu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.menu-open__closemenu span:first-child {
+  -webkit-transform: translate(1px, 22px) rotate(-45deg);
+      -ms-transform: translate(1px, 22px) rotate(-45deg);
+          transform: translate(1px, 22px) rotate(-45deg);
+}
+
+.menu-open__closemenu span:last-child {
+  -webkit-transform: translate(1px, 19px) rotate(45deg);
+      -ms-transform: translate(1px, 19px) rotate(45deg);
+          transform: translate(1px, 19px) rotate(45deg);
 }
 
 .footer {
@@ -1396,12 +1600,39 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     padding: 0 40px;
   }
 }
+@media (min-width: 1120px) {
+  .menu-open__mail::before {
+    width: 30px;
+    height: 20px;
+    left: -50px;
+  }
 
+  .menu-open__closemenu {
+    width: 50px;
+  }
+
+  .menu-open__closemenu span {
+    height: 5px;
+  }
+
+  .menu-open__closemenu span:first-child {
+    -webkit-transform: translate(1px, 22px) rotate(-45deg);
+        -ms-transform: translate(1px, 22px) rotate(-45deg);
+            transform: translate(1px, 22px) rotate(-45deg);
+  }
+
+  .menu-open__closemenu span:last-child {
+    -webkit-transform: translate(1px, 17px) rotate(45deg);
+        -ms-transform: translate(1px, 17px) rotate(45deg);
+            transform: translate(1px, 17px) rotate(45deg);
+  }
+}
 @media (min-width: 1200px) {
 
   .about__box-text {
     width: 531px;
     height: 137px;
+    top: 33%;
   }
 
   .about__title {
@@ -1639,6 +1870,40 @@ div.metaslider .slider-wrapper .nivo-controlNav a {
     width: 10px;
     height: 20px;
     top: 85%;
+  }
+  .menu-open__logo img {
+    width: 286px;
+    height: 72px;
+  }
+
+  .menu-open__list {
+    font-size: 30px;
+  }
+
+  .menu-open__contacts {
+    font-size: 30px;
+  }
+
+  .menu-open__tel::before {
+    width: 30px;
+    height: 30px;
+    left: -40px;
+  }
+
+  .menu__link {
+    width: 100%;
+    height: 201px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .primary__box-img {

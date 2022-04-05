@@ -23,7 +23,7 @@
 		left: 50%;
 		transform: translate(-50%);
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			width: 531px;
 			height: 137px;
 
@@ -38,7 +38,7 @@
 		line-height: 130%;
 		text-transform: uppercase;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 50px;
 		}
 
@@ -50,7 +50,7 @@
 		font-size: 14px;
 		line-height: 130%;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 25px;
 		}
 
@@ -62,7 +62,7 @@
 video[poster] {
 
 
-	@media (min-width:1000px) {
+	@media (min-width:1200px) {
 		@include background (url("./../img/about/about-poster.jpg"));
 	}
 }
@@ -76,7 +76,7 @@ video[poster] {
 	max-height: 278px;
 	border: 20px solid $bgColor;
 
-	@media (min-width:1000px) {
+	@media (min-width:1200px) {
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 		max-height: 1093px;
 	}

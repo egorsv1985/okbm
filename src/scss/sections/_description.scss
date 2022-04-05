@@ -7,7 +7,7 @@
 
 	padding: 50px 0;
 
-	@media (min-width:1000px) {
+	@media (min-width:1200px) {
 		padding: 100px 0 115px;
 	}
 
@@ -20,7 +20,7 @@
 		display: flex;
 		flex-direction: column;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			flex-direction: row;
 			justify-content: center;
 
@@ -46,7 +46,7 @@
 
 		margin-bottom: 32px;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			display: none;
 
 
@@ -57,7 +57,7 @@
 	&__title {
 		display: none;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			display: block;
 			margin: 0 auto 40px;
 			text-align: center;
@@ -88,7 +88,7 @@
 			filter: blur(60.0484px);
 			z-index: -1;
 
-			@media (min-width:1000px) {
+			@media (min-width:1200px) {
 				border-width: 20px;
 				width: 476px;
 				height: 619px;
@@ -104,7 +104,7 @@
 		max-width: 281px;
 		max-height: 365px;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 
 			max-width: 476px;
 			max-height: 619px;
@@ -132,7 +132,7 @@
 		bottom: 0;
 		left: 0;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 
 			width: 347px;
 			height: 187px;
@@ -151,7 +151,7 @@
 
 			margin-bottom: 7px;
 
-			@media (min-width:1000px) {
+			@media (min-width:1200px) {
 				font-size: 30px;
 				margin-bottom: 15px;
 			}
@@ -163,7 +163,7 @@
 			line-height: 105.5%;
 			color: $textColor;
 
-			@media (min-width:1000px) {
+			@media (min-width:1200px) {
 
 				font-size: 25px;
 
@@ -188,7 +188,7 @@
 		background: #FFFFFF;
 		z-index: 1;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			width: 948px;
 			height: 916px;
 
@@ -213,7 +213,7 @@
 		color: $textColorAbout;
 		margin-bottom: 20px;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 25px;
 			line-height: 35px;
 			margin-bottom: 35px;
@@ -230,7 +230,7 @@
 
 		color: $txtColorDesc;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 25px;
 			line-height: 35px;
 

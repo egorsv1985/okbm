@@ -1,4 +1,21 @@
 <section class="primary">
+	<div class="swiper mySwiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="@img/primary/primary-bg.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="@img/description/description-bg.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="@img/primary/primary-bg.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="@img/description/description-bg.jpg" alt="">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
 	<div class="container">
 		<div class="primary__wrapper">
 			<h1 class="primary__title title"></h1>
@@ -7,70 +24,50 @@
 				<p class="primary__desc">Более 60 лет на рынке</p>
 			</div>
 			<ul class="primary__menu menu">
-				@@include('../blocks/menu-list.html', {
-				"link" : "competencies.html",
-				"img" : "@img/primary/competents.svg",
-				"alt" : "КОМПЕТЕНЦИИ",
-				"text" : "КОМПЕТЕНЦИИ"
-				})
-				@@include('../blocks/menu-list.html', {
-					"link" : "designing.html",
-					"img" : "@img/primary/designing.svg",
-					"alt" : "ПРОЕКТИРОВАНИЕ",
-					"text" : "ПРОЕКТИРОВАНИЕ"
-					})
-					@@include('../blocks/menu-list.html', {
-						"link" : "production.html",
-						"img" : "@img/primary/production.svg",
-						"alt" : "ПРОИЗВОДСТВО",
-						"text" : "ПРОИЗВОДСТВО"
-						})
-					@@include('../blocks/menu-list.html', {
-						"link" : "service.html",
-						"img" : "@img/primary/service.svg",
-						"alt" : "сервисное	ОБСЛУЖИВАНИЕ",
-						"text" : "сервисное	ОБСЛУЖИВАНИЕ"
-						})
-					@@include('../blocks/menu-list.html', {
-						"link" : "divisions.html",
-						"img" : "@img/primary/divisions.svg",
-						"alt" : "Дочерние предприятия",
-						"text" : "Дочерние предприятия"
-						})
-</ul>
-</div>
-</div>
+				<li class="menu__list">
+					<a class="menu__link" href="competencies.html">КОМПЕТЕНЦИИ</a>
+					<img class="menu__img" src="@img/primary/competents.png" title="КОМПЕТЕНЦИИ" alt="КОМПЕТЕНЦИИ">
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="designing.html">ПРОЕКТИРОВАНИЕ</a>
+					<img class="menu__img" src="@img/primary/designing.png" title="ПРОЕКТИРОВАНИЕ" alt="ПРОЕКТИРОВАНИЕ">
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="production.html">ПРОЕКТИРОВАНИЕ</a>
+					<img class="menu__img" src="@img/primary/production.svpng" title="ПРОИЗВОДСТВО" alt="ПРОИЗВОДСТВО">
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="service.html">ПРОЕКТИРОВАНИЕ</a>
+					<img class="menu__img" src="@img/primary/service.png" title="сервисное ОБСЛУЖИВАНИЕ" alt="сервисное ОБСЛУЖИВАНИЕ">
+				</li>
+				<li class="menu__list">
+					<a class="menu__link" href="divisions.html">ПРОЕКТИРОВАНИЕ</a>
+					<img class="menu__img" src="@img/primary/divisions.png" title="Дочерние предприятия" alt="Дочерние предприятия">
+				</li>
+			</ul>
+		</div>
+	</div>
 
 </section>
 <ul class="primary__menu-mob menu">
-	@@include('../blocks/menu-list.html', {
-	"link" : "competencies.html",
-	"img" : "@img/primary/competents.svg",
-	"alt" : "КОМПЕТЕНЦИИ",
-	"text" : "КОМПЕТЕНЦИИ"
-	})
-	@@include('../blocks/menu-list.html', {
-		"link" : "designing.html",
-		"img" : "@img/primary/designing.svg",
-		"alt" : "ПРОЕКТИРОВАНИЕ",
-		"text" : "ПРОЕКТИРОВАНИЕ"
-		})
-		@@include('../blocks/menu-list.html', {
-			"link" : "production.html",
-			"img" : "@img/primary/production.svg",
-			"alt" : "ПРОИЗВОДСТВО",
-			"text" : "ПРОИЗВОДСТВО"
-			})
-		@@include('../blocks/menu-list.html', {
-			"link" : "service.html",
-			"img" : "@img/primary/service.svg",
-			"alt" : "сервисное	ОБСЛУЖИВАНИЕ",
-			"text" : "сервисное	ОБСЛУЖИВАНИЕ"
-			})
-		@@include('../blocks/menu-list.html', {
-			"link" : "divisions.html",
-			"img" : "@img/primary/divisions.svg",
-			"alt" : "Дочерние предприятия",
-			"text" : "Дочерние предприятия"
-			})
+	<li class="menu__list">
+		<a class="menu__link" href="competencies.html">КОМПЕТЕНЦИИ</a>
+		<img class="menu__img" src="@img/primary/competents.png" title="КОМПЕТЕНЦИИ" alt="КОМПЕТЕНЦИИ">
+	</li>
+	<li class="menu__list">
+		<a class="menu__link" href="designing.html">ПРОЕКТИРОВАНИЕ</a>
+		<img class="menu__img" src="@img/primary/designing.svpng" title="ПРОЕКТИРОВАНИЕ" alt="ПРОЕКТИРОВАНИЕ">
+	</li>
+	<li class="menu__list">
+		<a class="menu__link" href="production.html">ПРОЕКТИРОВАНИЕ</a>
+		<img class="menu__img" src="@img/primary/production.png" title="ПРОИЗВОДСТВО" alt="ПРОИЗВОДСТВО">
+	</li>
+	<li class="menu__list">
+		<a class="menu__link" href="service.html">ПРОЕКТИРОВАНИЕ</a>
+		<img class="menu__img" src="@img/primary/service.png" title="сервисное ОБСЛУЖИВАНИЕ" alt="сервисное ОБСЛУЖИВАНИЕ">
+	</li>
+	<li class="menu__list">
+		<a class="menu__link" href="divisions.html">ПРОЕКТИРОВАНИЕ</a>
+		<img class="menu__img" src="@img/primary/divisions.png" title="Дочерние предприятия" alt="Дочерние предприятия">
+	</li>
 </ul>

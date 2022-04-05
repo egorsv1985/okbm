@@ -7,8 +7,27 @@ Template Name: Главная
 <?php get_header(); ?>
 
 <section class="primary">
+	<?php
+	$ban = get_field('banner', 39);
+	$banbody = '';
+	if ($ban) {
+		$banbody .= '<div class="swiper-banners swiper">
+							<div class="swiper-wrapper">';
+		foreach ($ban as $im) {
+			$banbody .= '
+									<div class="swiper-slide">
+										<img class="image-fluid" src="' . $im['url'] . '">
+									  </div>';
+		}
+		$banbody .= '
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>';
+	}
+	echo $banbody;
+	?>
 
-	<?php echo do_shortcode('[metaslider id="117"]'); ?>
+
 	<div class="primary__wrap">
 		<h2 class="primary__subtitle subtitle">ГОД ОСНОВАНИЯ 1960</h2>
 		<p class="primary__desc">Более 60 лет на рынке</p>
@@ -27,13 +46,15 @@ Template Name: Главная
 		?>
 
 	</div>
-	</div>
+
 </section>
+
 <?php wp_nav_menu(
 	array(
 		'theme_location' => 'primary-menu',
 		'menu_class' => 'primary__menu-mob menu-mob',
 		'menu_id' => 'primary',
+
 	)
 );
 ?>
@@ -43,9 +64,9 @@ Template Name: Главная
 			<h2 class="about__title title">О КОМПАНИИ</h2>
 			<h3 class="about__subtitle subtitle">Видео презентация компании ОКБМ</h3>
 		</div>
-		<div class="video">
-			<?php the_field('video'); ?>
-		</div>
+		<a class="about__link" data-fancybox href="https://www.youtube.com/watch?v=g-ui_ul5MaQ" target="_blank">
+			<img class="about__img" src="<?php the_field('kartinka'); ?>" alt="<?php the_field('kartinka'['alt']); ?>" title="<?php the_field('kartinka'['title']); ?>">
+		</a>
 
 	</div>
 </section>
@@ -89,10 +110,30 @@ Template Name: Главная
 	<div class="container">
 		<div class="sertificates__wrapper">
 			<h2 class="sertificates__title title">Лицензии и сертификаты</h2>
-			<div class="swiper">
-				<?php echo do_shortcode('[metaslider id="133"]'); ?>
-			</div>
+
 		</div>
+
 	</div>
 </section>
+<?php
+$gal = get_field('sertifikaty', 39);
+$galbody = '';
+if ($gal) {
+	$galbody .= '<div class="swiper-sertificates swiper">
+							<div class="swiper-wrapper">';
+	foreach ($gal as $im) {
+		$galbody .= '
+									<div class="swiper-slide">
+										<img class="image" src="' . $im['url'] . '">
+									  </div>';
+	}
+	$galbody .= '
+							</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
+						</div>';
+}
+echo $galbody;
+?>
 <?php get_footer(); ?>

@@ -1,11 +1,17 @@
 import Swiper, {
 	Navigation,
-	Pagination,
-	Scrollbar
+	Pagination
 } from 'swiper';
 
 // Now you can use Swiper
-const swiper = new Swiper('.swiper', {});
+
+
+var swiper = new Swiper(".mySwiper", {
+	pagination: {
+		el: ".swiper-pagination",
+	},
+});
+
 
 function testWebP(callback) {
 
@@ -87,7 +93,7 @@ export function menuOpen() {
 	document.documentElement.classList.add("open-menu");
 }
 export function menuClose() {
-	let closemenu = document.querySelector(".menu-open__closemenu");
+	let closemenu = document.querySelector("open-menu");
 	if (closemenu) {
 		closemenu.addEventListener("click", function (e) {
 			document.documentElement.classList.remove("open-menu");

@@ -32,7 +32,7 @@ html.open-menu .menu-open {
 
 	// .menu-open__logo
 	&__logo {
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			img {
 				width: 286px;
 				height: 72px;
@@ -48,7 +48,7 @@ html.open-menu .menu-open {
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 30px;
 		}
 
@@ -73,7 +73,7 @@ html.open-menu .menu-open {
 
 		font-weight: 300;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 30px;
 		}
 
@@ -109,7 +109,7 @@ html.open-menu .menu-open {
 			width: 15px;
 			height: 15px;
 
-			@media (min-width:1000px) {
+			@media (min-width:1200px) {
 				width: 30px;
 				height: 30px;
 				left: -40px;
@@ -129,7 +129,7 @@ html.open-menu .menu-open {
 			width: 15px;
 			height: 10px;
 
-			@media (min-width:1000px) {
+			@media (min-width:1120px) {
 				width: 30px;
 				height: 20px;
 				left: -50px;
@@ -142,19 +142,32 @@ html.open-menu .menu-open {
 		top: 2em;
 		right: 2em;
 		cursor: pointer;
-		width: 50px;
+		width: 25px;
 		height: 50px;
 		& span {
 			display: block;
 			width: 100%;
-			height: 5px;
+			height: 3px;
 			border-radius: 3px;
 			background-color: #fff;
 			&:first-child {
 				transform: translate(1px, 22px) rotate(-45deg);
 			}
 			&:last-child {
-				transform: translate(1px, 17px) rotate(45deg);
+				transform: translate(1px, 19px) rotate(45deg);
+			}
+		}
+		@media (min-width:1120px) {
+			width: 50px;
+			& span {				
+				
+				height: 5px;
+				&:first-child {
+					transform: translate(1px, 22px) rotate(-45deg);
+				}
+				&:last-child {
+					transform: translate(1px, 17px) rotate(45deg);
+				}
 			}
 		}
 	}

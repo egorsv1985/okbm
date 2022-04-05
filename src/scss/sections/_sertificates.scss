@@ -1,7 +1,7 @@
 .sertificates {
 	padding: 50px 0 90px;
 
-	@media (min-width:1000px) {
+	@media (min-width:1200px) {
 		padding: 85px 0 172px;
 	}
 
@@ -26,7 +26,7 @@
 
 		color: #263A93;
 
-		@media (min-width:1000px) {
+		@media (min-width:1200px) {
 			font-size: 50px;
 			margin-bottom: 40px;
 		}
@@ -39,16 +39,16 @@
 
 .title {}
 
-.swiper {
-	margin: 0 auto;
+// .swiper {
+// 	margin: 0 auto;
 
-	img {
-		width: 133px;
-		height: 204px;
+// 	img {
+// 		width: 133px;
+// 		height: 204px;
 
-		@media (min-width:1000px) {
-			width: 462px;
-			height: 702px;
-		}
-	}
-}
+// 		@media (min-width:1200px) {
+// 			width: 462px;
+// 			height: 702px;
+// 		}
+// 	}
+// }
