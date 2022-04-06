@@ -126,7 +126,9 @@ Template Name: Главная
 		foreach ($gal as $im) {
 			$galbody .= '
 									<div class="swiper-slide">
+									<div class="swiper-slide__box">
 										<img class="image" src="' . $im['url'] . '">
+									  </div>
 									  </div>';
 		}
 		$galbody .= '
